@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Live Code Editor</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/nord.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/lint/lint.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/fold/foldgutter.min.css">
+	<style>
+		:root {
+			--color-background-dark: #202020;
+			--color-text-light: #EEEEEE;
+			--color-ui-background: #3a3a3a;
+			--color-control-background: #505050;
+			--color-border: #757575;
+			--color-accent: #62ba0a;
+			--color-accent-dark: #4e9407;
+			--radius-medium: 8px;
+			--radius-small: 4px;
+			--padding-medium: 15px;
+			--padding-small: 10px;
+			--gap-medium: 15px;
+			--font-family: "Ubuntu", sans-serif;
+		}
+
+		@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: var(--font-family), Arial, sans-serif;
+			background-color: var(--color-background-dark);
+			color: var(--color-text-light);
+			margin: 0;
+			padding: var(--padding-medium);
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			min-height: 100vh;
+			overflow-y: auto;
+      background-color: var(--color-background-dark);
+      background: url(../assets/background.png) no-repeat center center fixed;
+      background-size: cover;
+		}
+
+		.container {
+			background-color: var(--color-ui-background);
+			padding: var(--padding-medium);
+			border-radius: var(--radius-medium);
+			width: 90%;
+			max-width: 800px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+			margin-top: 2vh;
+			margin-bottom: 2vh;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: var(--gap-medium);
+			color: var(--color-text-light);
+			font-weight: 700;
+		}
+
+		.form-group {
+			margin-bottom: var(--gap-medium);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: 500;
+		}
+
+		input[type="password"],
+		select {
+			width: 100%;
+			padding: var(--padding-small);
+			border-radius: var(--radius-small);
+			border: 1px solid var(--color-border);
+			background-color: var(--color-control-background);
+			color: var(--color-text-light);
+			font-family: inherit;
+			font-size: 1rem;
+		}
+
+		input[type="password"]:focus,
+		select:focus {
+			outline: 2px solid var(--color-accent);
+			border-color: var(--color-accent);
+		}
+
+		select {
+			appearance: none;
+			cursor: pointer;
+		}
+
+		.CodeMirror {
+			border: 1px solid var(--color-border);
+			border-radius: var(--radius-small);
+			height: auto;
+			font-size: 0.95rem;
+			line-height: 1.4;
+		}
+
+		.CodeMirror-focused {
+			outline: 2px solid var(--color-accent) !important;
+			border-color: var(--color-accent);
+		}
+
+		.CodeMirror {
+			background-color: #263238;
+		}
+
+		.submit-button {
+			all: unset;
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			font-weight: 700;
+			text-align: center;
+			background-color: var(--color-accent);
+			color: var(--color-text-light);
+			font-size: 1.1rem;
+			padding: var(--padding-small) 0 calc(var(--padding-small) + 5px) 0;
+			border-radius: var(--radius-small);
+			text-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+			box-shadow: inset 0 -5px var(--color-accent-dark);
+			cursor: pointer;
+			transition: all 0.1s ease-out;
+			margin-top: var(--gap-medium);
+		}
+
+		.submit-button:hover {
+			box-shadow: inset 0 -3px var(--color-accent-dark);
+			padding-top: calc(var(--padding-small) + 2px);
+			padding-bottom: calc(var(--padding-small) + 3px);
+		}
+
+		.submit-button:active {
+			background-color: var(--color-accent-dark);
+			box-shadow: inset 0 -1px var(--color-accent-dark);
+			padding-top: calc(var(--padding-small) + 4px);
+			padding-bottom: calc(var(--padding-small) + 1px);
+			transform: translateY(1px);
+		}
+
+		#outputArea {
+			margin-top: var(--gap-medium);
+			background-color: var(--color-control-background);
+			border: 1px solid var(--color-border);
+			border-radius: var(--radius-small);
+			padding: var(--padding-small);
+			min-height: 50px;
+			max-height: 150px;
+			overflow-y: auto;
+			font-family: monospace;
+			font-size: 0.9rem;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+			color: #cccccc;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Live Code Editor</h1>
+		<form id="editorForm">
+			<div class="form-group">
+				<label for="tokenInput">Developer Token:</label>
+				<input type="password" id="tokenInput" name="token" required>
+			</div>
+			<div class="form-group">
+				<label for="serverSelect">Target Server:</label>
+				<select id="serverSelect" name="server" required>
+					<option value="" disabled selected>Loading servers...</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="codeInput">JavaScript Code:</label>
+				<textarea id="codeInput" name="code" placeholder="Loading code editor..."></textarea>
+			</div>
+			<button type="button" id="submitButton" class="submit-button">Submit Code</button>
+		</form>
+		<div id="outputArea">Submission status will appear here...</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/javascript/javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/edit/matchbrackets.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/edit/closebrackets.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/lint/lint.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/lint/javascript-lint.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/fold/foldcode.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/fold/foldgutter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/fold/brace-fold.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/addon/fold/comment-fold.min.js"></script>
+	<script src="https://unpkg.com/jshint@2.13.6/dist/jshint.js"></script>
+	<script type="module">
+		const servers = await (await fetch("./servers.json")).json();
+		const serverSelect = document.getElementById("serverSelect");
+		const tokenInput = document.getElementById("tokenInput");
+    tokenInput.value = localStorage.getItem("input-token") ?? "";
+		const codeInputElement = document.getElementById("codeInput");
+		const submitButton = document.getElementById("submitButton");
+		const outputArea = document.getElementById("outputArea");
+		const editorForm = document.getElementById("editorForm");
+		let editor;
+
+		function initializeCodeEditor() {
+			editor = CodeMirror.fromTextArea(codeInputElement, {
+				mode: "javascript",
+				theme: "nord",
+				lineNumbers: true,
+				matchBrackets: true,
+				autoCloseBrackets: true,
+				indentUnit: 4,
+				tabSize: 4,
+				lineWrapping: true,
+				gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+				foldGutter: true,
+				lint: {
+          esversion: 11
+        }
+			});
+      editor.setSize();
+			editor.setValue(`const { combineStats, skillSet, g, dfltskl, statnames, gunCalcNames } = require("./gstats.js");\n\n// Enter your tank definition code here...\nexports.basic = {
+    PARENT: [exports.genericTank],
+    LABEL: 'Basic',
+    DANGER: 3,
+    GUNS: [{ /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+        POSITION: [18, 8, 1, 0, 0, 0, 0],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.lessdmg, g.bitlessreload]),
+            TYPE: exports.bullet
+        }
+    }]
+};`);
+			setTimeout(() => editor.refresh(), 10);
+		}
+
+		function populateServerOptions() {
+			serverSelect.innerHTML = "";
+			if (servers.length === 0) {
+				const option = document.createElement("option");
+				option.value = "";
+				option.textContent = "No servers configured";
+				option.disabled = true;
+				serverSelect.appendChild(option);
+				return;
+			}
+			servers.forEach(server => {
+				const option = document.createElement("option");
+				option.value = `${server.protocol}//${server.url}`;
+				option.textContent = server.name;
+				serverSelect.appendChild(option);
+			});
+			if (serverSelect.options.length > 0) {
+				serverSelect.selectedIndex = 0;
+			}
+		}
+		async function handleSubmit() {
+			const token = tokenInput.value;
+			const selectedServerUrl = serverSelect.value;
+			const code = editor.getValue();
+			if (!token) {
+				outputArea.textContent = "Error: Developer Token is required.";
+				return;
+			}
+			if (!selectedServerUrl) {
+				outputArea.textContent = "Error: Please select a target server.";
+				return;
+			}
+			if (!code) {
+				outputArea.textContent = "Error: Code cannot be empty.";
+				return;
+			}
+			outputArea.textContent = `Submitting code to ${serverSelect.options[serverSelect.selectedIndex].text} (${selectedServerUrl})...`;
+			submitButton.disabled = true;
+			const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!!
+			try {
+				const response = await fetch(targetEndpoint, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"X-Developer-Token": token
+					},
+					body: JSON.stringify({
+						code: code
+					})
+				});
+				const responseBody = await response.text();
+				if (response.ok) {
+					outputArea.textContent = `Success! Server (${response.status}) responded:\n${responseBody}`;
+				} else {
+					outputArea.textContent = `Error: Server responded with status ${response.status}:\n${responseBody}`;
+				}
+			} catch (error) {
+				console.error("Submission Error:", error);
+				outputArea.textContent = `Network Error: Could not reach the server at ${targetEndpoint}. Check console for details. \nError: ${error.message}`;
+			} finally {
+				submitButton.disabled = false;
+			}
+		}
+		submitButton.addEventListener("click", handleSubmit);
+		editorForm.addEventListener("submit", (event) => {
+			event.preventDefault();
+			handleSubmit();
+		});
+		populateServerOptions();
+		initializeCodeEditor();
+	</script>
+</body>
+
+</html>

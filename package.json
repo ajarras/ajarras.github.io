@@ -1,0 +1,18 @@
+{
+  "name": "ajplayz-arras",
+  "version": "latest",
+  "scripts": {
+    "start": "node index --optimize-for-size"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-minify": "latest",
+    "cors": "latest",
+    "compression": "latest",
+    "js-confuser": "^2.0.0"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "private": true
+}

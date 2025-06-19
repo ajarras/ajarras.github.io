@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NSVDMGXQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GT-NSVDMGXQ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>AJax Arras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Stalinist+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/styles/index.css">
+  <meta property="og:title" content="AJax Arras">
+  <meta property="og:description" content="AJax Arras!">
+  <meta property="og:image" content="/assets/logo-og.png">
+  <meta property="og:url" content="https://ajplayzarras.glitch.me">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    window.onerror = err => prompt(err, err);
+    window.onunhandledrejection = err => prompt(err.reason, err);
+  </script>
+</head>
+
+<body oncontextmenu="return false" class="ubuntu-regular-font">
+  <canvas id="gameCanvas" tabindex="0"></canvas>
+  <div class="background" id="background"></div>
+  <div class="menu" id="menu">
+    <div class="menu-content">
+      <div class="menu-section">
+        <iframe class="menu-iframe" src="https://discord.com/widget?id=550433357377568770&amp;theme=dark"></iframe>
+      </div>
+      <div class="menu-section menu-middle">
+        <img class="menu-icon" src="./assets/logo.png">
+        <span class="menu-title">AJax Arras</span>
+        <div class="server-select" id="server-select">
+        </div>
+        <input class="menu-input menu-input-name" spellcheck="false" type="text" placeholder="This is the tale of..."
+          id="input-name">
+        <input class="menu-input menu-input-token" spellcheck="false" type="password"
+          placeholder="Token (leave blank if none)" id="input-token" style="display: none;">
+        <button class="menu-play-button" id="button-play">PLAY</button>
+      </div>
+      <div class="menu-section menu-changelog scroller" id="menu-changelog"></div>
+    </div>
+    <div class="menu-footer">
+      <a class="menu-linker" href="/credits.html" target=" _blank">Credits</a>
+      <a class="menu-linker" href="https://ajplayzarras-classic.glitch.me/" target="_blank">AJ Classic</a>
+      <a class="menu-linker" href="https://glitch.com/edit/#!/arras-template" target="_blank">Arras Template</a>
+      <a class="menu-linker"
+        href="https://docs.google.com/spreadsheets/d/1zlKpjtPoiCt5sqOg1i1urdmQbRNcIztbF1VpxZYps1I/edit?usp=sharing"
+        target="_blank">WR Sheet</a>
+      <a class="menu-linker" href="https://www.youtube.com/channel/UCn4epe1E2I8vHOCBjgdLh0g" target="_blank">Youtube</a>
+      <a class="menu-linker" href="https://forms.gle/CavZSgzbY1ii8w9g8" target="_blank">WR Submissions</a>
+    </div>
+  </div>
+  <div class="settings-menu" id="settings-menu">
+    <span class="settings-title">Settings Menu</span>
+    <div class="settings-content" id="settings-content-container">
+    </div>
+  </div>
+  <button class="settings-menu-button" id="settings-menu-button"></button>
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>

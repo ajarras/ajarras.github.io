@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Glitch Main",
+		"url": "puffy-medicine.glitch.me",
+		"protocol": "https:"
+	},
+	{
+		"name": "Glitch Dev",
+		"url": "puffy-medicine-developer.glitch.me",
+		"protocol": "https:"
+	},
+	{
+		"name": "Localhost",
+		"url": "localhost:3002",
+		"protocol": "http:"
+	}
+]
