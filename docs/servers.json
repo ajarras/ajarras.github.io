@@ -1,17 +1,17 @@
 [
 	{
-		"name": "Glitch Main",
+		"name": "xskutsu",
+		"url": "73.211.177.153:3012",
+		"protocol": "http:"
+	},
+	{
+		"name": "Glitch (legacy)",
 		"url": "puffy-medicine.glitch.me",
 		"protocol": "https:"
 	},
 	{
-		"name": "Glitch Dev",
-		"url": "puffy-medicine-developer.glitch.me",
-		"protocol": "https:"
-	},
-	{
 		"name": "Localhost",
-		"url": "localhost:3002",
+		"url": "localhost:3012",
 		"protocol": "http:"
 	}
 ]
