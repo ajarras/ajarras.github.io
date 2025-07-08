@@ -1,13 +1,13 @@
 [
 	{
+		"name": "Render",
+		"url": "aj-server-n8yv.onrender.com",
+		"protocol": "https:"
+	},
+	{
 		"name": "xskutsu",
 		"url": "73.211.177.153:3012",
 		"protocol": "http:"
-	},
-	{
-		"name": "Render",
-		"url": "aj-server-n8yv.onrender.com/",
-		"protocol": "https:"
 	},
 	{
 		"name": "Localhost",
