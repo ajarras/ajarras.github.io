@@ -1,4 +1,7 @@
-# UPDATE 0/0/0000 - (IN PROGRESS)
+# UPDATE 7/8/2025 - STILL ALIVE
+- Migrated the game off of Glitch
+- Disabled the Discord bot until the server is fully up and running
+# UPDATE 5/21/2025 - we didnt name this one for some reason
 - Added Defeatist, a doubled Streamliner whose barrel count decreases based on health
 - Taurus portals no longer collide with rocks but intersecting with one will prevent the portal from releasing bullets
 - Fixed the firing pattern of all Submachines
