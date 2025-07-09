@@ -1,4 +1,4 @@
-# UPDATE 7/8/2025 - STILL ALIVE
+# UPDATE 7/8/2025 - i survived glitch imploding and all i got was this lousy update
 - Migrated the game off of Glitch
 - Updated the server's redirect to be automatic instead of that weird button
 # UPDATE 5/21/2025 - we didnt name this one for some reason
