@@ -1427,19 +1427,25 @@ void !(function () {
 		getStatNames: (num) => {
 			switch (num) {
 				case 1:
-					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Engine Acceleration;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Engine Acceleration;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //SMASHER
 				case 2:
-					return "Body Damage;Max Health;Drone Speed;Drone Health;Drone Penetration;Drone Damage;Respawn Rate;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Drone Speed;Drone Health;Drone Penetration;Drone Damage;Respawn Rate;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //DRONE
 				case 3:
-					return "Body Damage;Max Health;Drone Speed;Drone Health;Drone Penetration;Drone Damage;Max Drone Count;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Minion Speed;Minion Health;Minion Penetration;Minion Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //MINION
 				case 4:
-					return "Body Damage;Max Health;Swarm Speed;Swarm Health;Swarm Penetration;Swarm Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Drone Speed;Drone Health;Drone Penetration;Drone Damage;Max Drone Count;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //NECRO
 				case 5:
-					return "Body Damage;Max Health;Placement Speed;Trap Health;Trap Penetration;Trap Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Swarm Speed;Swarm Health;Swarm Penetration;Swarm Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //SWARM
 				case 6:
-					return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Placement Speed;Trap Health;Trap Penetration;Trap Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //TRAP
+				case 7:
+					return "Body Damage;Max Health;Placement Speed;Block Health;Block Penetration;Block Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //BLOCK
+				case 8:
+					return "Body Damage;Max Health;Boomerang Speed;Boomerang Health;Boomerang Penetration;Boomerang Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //BOOMERANG
+				case 9:
+					return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //GENERIC
 				default:
-					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");	//BULLET
 			}
 		},
 		skills: [{
