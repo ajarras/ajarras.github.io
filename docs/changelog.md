@@ -1,6 +1,7 @@
 # UPDATE 7/8/2025 - i survived glitch imploding and all i got was this lousy update
 - Migrated the game off of Glitch
 - Updated the server's redirect to be automatic instead of that weird button
+- Updated the upgrade names for various branches that use different ammo
 # UPDATE 5/21/2025 - we didnt name this one for some reason
 - Added Defeatist, a doubled Streamliner whose barrel count decreases based on health
 - Taurus portals no longer collide with rocks but intersecting with one will prevent the portal from releasing bullets
@@ -110,7 +111,7 @@
 - Removed Gunslinger
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
-- Improved formance of upgrade tree data building.
+- Improved performance of upgrade tree data building.
 - Removed debug text from upgrade menu.
 - Made upgrade messages appear as actual messages.
 - Added a searh capability to the upgrade tree.
