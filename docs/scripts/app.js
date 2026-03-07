@@ -383,6 +383,7 @@ void !(function () {
 		CHAT_KEY: 70,
 		DEV_CHAT_KEY: 220,
 		KEY_RESET_LIFE: 189,
+		KEY_SEE_TOOOLTIP: 222,
 		SWITCH_TANK: 16,
 		PASSIVE_MODE: 80,
 		FOVtoggle: 16,
@@ -1695,6 +1696,9 @@ void !(function () {
 					break;
 				case global.KEY_RESET_LIFE:
 					this.parent.socket.talk("resetLife");
+					break;
+				case global.KEY_SEE_TOOLTIP:
+					this.parent.socket.talk("tooltip");
 					break;
 			}
 			if (!event.repeat) {
