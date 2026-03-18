@@ -21,6 +21,7 @@
 - Updated Bulward's design and mechanics to be more accurate
 - Redesigned Bastion and renamed it to Apiary
 - Redesigned Tri-Trapper and Hexa Trapper
+- Made Revolutionist branch from Flank Guard
 - Fixed some branching and tier errors
 - Made the upgrade tree root from Basic by default
 - Removed Revolver
@@ -109,6 +110,16 @@
 - Removed Private
 - Removed Outlaw
 - Removed Gunslinger
+- Removed Auto-Basic
+- Removed Auto-Sniper
+- Removed Auto-Assassin
+- Removed Auto-Ranger
+- Removed Autobrid
+- Removed Autokick
+- Removed Multiclasser
+- Removed Auto-Flank
+- Removed Auto-Double
+- Removed Axol-Auto
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
 - Improved performance of upgrade tree data building.
