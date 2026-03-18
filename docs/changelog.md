@@ -22,6 +22,7 @@
 - Redesigned Bastion and renamed it to Apiary
 - Redesigned Tri-Trapper and Hexa Trapper
 - Made Revolutionist branch from Flank Guard
+- Made Dread-Ship branch from Expedition and Beegun
 - Fixed some branching and tier errors
 - Made the upgrade tree root from Basic by default
 - Removed Revolver
@@ -114,6 +115,9 @@
 - Removed Auto-Sniper
 - Removed Auto-Assassin
 - Removed Auto-Ranger
+- Removed Auto-Hunter
+- Removed Auto-Cruiser
+- Removed Auto-Commander
 - Removed Autobrid
 - Removed Autokick
 - Removed Multiclasser
