@@ -3921,7 +3921,7 @@ void !(function () {
 					ctx.stroke();
 
 					ctx.save();
-					drawText(icon.mockup.name + " test", panelWidth / 2 + panelX, contentY, 30, color.guiwhite, "center");
+					drawText(icon.mockup.name, panelWidth / 2 + panelX, contentY, 30, color.guiwhite, "center");
 					contentY += 30;
 					ctx.restore();
 
