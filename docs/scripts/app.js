@@ -3942,7 +3942,14 @@ void !(function () {
 					// Draw Tooltip above buttons
                     if (icon.mockup.tooltip != "") {
                         if (Array.isArray(icon.mockup.tooltip)) {
-
+						let formattedTooltips = [];
+						icon.mockup.tooltip.forEach(textLine => {
+							if (icon.mockup.tooltip[textLine].length > 55) {
+								formattedTooltips.push(icon.mockup.tooltip[textLine].split());
+							} else {
+								formattedTooltips.push(icon.mockup.tooltip[textLine]);
+							}
+						});
 							icon.mockup.tooltip.forEach(textLine => {
 								ctx.save();
                                 drawText(textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
