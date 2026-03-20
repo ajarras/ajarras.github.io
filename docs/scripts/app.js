@@ -3942,13 +3942,13 @@ void !(function () {
 					drawEntity(xx, yy, picture, 2, scale / picture.size / 2, angle, true);
 					contentY += iconSize + panelPadding;
 					
-					// Draw Tooltip here, above buttons
-					//if (icon.mockup.tooltip != undefined) {
+					// Draw Tooltip above buttons
+					/if (icon.mockup.tooltip != "") {
 						ctx.save();
-						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); //WIP
+						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); // Tanks without tooltips display random ones currently
 						contentY += 30;
 						ctx.restore();
-					//}
+					}
 					
 					const buttonHeight = 50;
 					contentY = panelHeight - buttonHeight;
