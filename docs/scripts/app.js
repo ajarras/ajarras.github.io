@@ -3943,12 +3943,12 @@ void !(function () {
                     if (icon.mockup.tooltip != "") {
                         if (Array.isArray(icon.mockup.tooltip)) {
 
-							icon.mockup.tooltip.forEach((textLine) => {
+							icon.mockup.tooltip.forEach(textLine => {
 								ctx.save();
-                                drawText((textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                                drawText(textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
                                 contentY += 20;
 								ctx.restore();
-							};
+							});
 
 							/*
                             for (let i = 0; i < icon.mockup.tooltip.length; i++) {
