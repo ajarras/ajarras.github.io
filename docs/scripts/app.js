@@ -3945,7 +3945,7 @@ void !(function () {
 					// Draw Tooltip here, above buttons
 					//if (icon.mockup.tooltip != undefined) {
 						ctx.save();
-						drawText(UpgradeTree.selectedIcon.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); #icon.mockup.tooltip
+						drawText(icon, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); #icon.mockup.tooltip
 						contentY += 30;
 						ctx.restore();
 					//}
