@@ -3921,11 +3921,11 @@ void !(function () {
 					ctx.stroke();
 
 					ctx.save();
-					drawText(icon.mockup.name, panelWidth / 2 + panelX, contentY, 30, color.guiwhite, "center");
+					drawText(*/icon.mockup.name*/ "test", panelWidth / 2 + panelX, contentY, 30, color.guiwhite, "center");
 					contentY += 30;
 					ctx.restore();
 
-					const angle = (performance.now() / 6500000000) % (Math.PI * 2);
+					const angle = (performance.now() / 650) % (Math.PI * 2);
 					const iconSize = panelWidth - panelPadding * 2;
 					const iconX = panelX + panelPadding;
 					ctx.fillStyle = icon.color;
