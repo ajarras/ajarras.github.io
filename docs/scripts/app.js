@@ -727,6 +727,7 @@ void !(function () {
 			facing: mockup.facing,
 			shape: mockup.shape,
 			name: mockup.name,
+			tooltip: mockup.tooltip,
 			score: 0,
 			tiggle: 0,
 			layer: mockup.layer,
@@ -3940,7 +3941,13 @@ void !(function () {
 					const yy = contentY + iconSize / 2 - offset * Math.sin(angle);
 					drawEntity(xx, yy, picture, 2, scale / picture.size / 2, angle, true);
 					contentY += iconSize + panelPadding;
-
+					
+					// Draw Tooltip here, above buttons
+					ctx.save();
+					drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 12, color.guiwhite, "center");
+					contentY += 30;
+					ctx.restore();
+					
 					const buttonHeight = 50;
 					contentY = panelHeight - buttonHeight;
 					for (let i = 0; i < 3; i++) {
@@ -3954,7 +3961,7 @@ void !(function () {
 						drawText(["Download Image 4x", "Download Image", "Upgrade to Tank"][i], panelX + panelWidth / 2, contentY + buttonHeight / 2, buttonHeight * 0.5, color.guiwhite, "center");
 						ctx.restore();
 						contentY -= panelMargin + buttonHeight;
-					}
+					} 
 				}
 
 				const spacing = 20;
