@@ -1698,9 +1698,6 @@ void !(function () {
 				case global.KEY_RESET_LIFE:
 					this.parent.socket.talk("resetLife");
 					break;
-				case global.KEY_SEE_TOOLTIP:
-					this.parent.socket.talk("tooltip");
-					break;
 			}
 			if (!event.repeat) {
 				switch (event.keyCode) {
@@ -3945,7 +3942,9 @@ void !(function () {
 					// Draw Tooltip above buttons
 					if (icon.mockup.tooltip != "") {
 						ctx.save();
-						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); // Tanks without tooltips display random ones currently
+						let tooltip = icon.mockup.tooltip;
+						let formattedTooltip = tooltip.replaceAll(".,", ".\n");
+						drawText(fomattedTooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 						contentY += 30;
 						ctx.restore();
 					}
