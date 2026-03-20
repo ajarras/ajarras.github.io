@@ -3940,13 +3940,21 @@ void !(function () {
 					contentY += iconSize + panelPadding;
 					
 					// Draw Tooltip above buttons
-					if (icon.mockup.tooltip != "") {
-						ctx.save();
-						//drawText(String(icon.mockup.tooltip).replaceAll(".,", `.\n`), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
-						drawText(String(icon.mockup.tooltip).split(".,"), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
-						contentY += 30;
+                    if (icon.mockup.tooltip != "") {
+                        if (Array.isArray(icon.mockup.tooltip)) {
+                            for (let i = 0; i < icon.mockup.tooltip.length; i++) {
+                                ctx.save();
+                                drawText([String(icon.mockup.tooltip)][i], panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                                contentY += 15;
+								ctx.restore();
+                            }
+                        } else {
+                            ctx.save();
+                            drawText(String(icon.mockup.tooltip), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                        }
+                        contentY += 30;
 						ctx.restore();
-					}
+                    }
 					
 					const buttonHeight = 50;
 					contentY = panelHeight - buttonHeight;
