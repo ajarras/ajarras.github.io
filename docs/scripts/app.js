@@ -3942,12 +3942,23 @@ void !(function () {
 					// Draw Tooltip above buttons
                     if (icon.mockup.tooltip != "") {
                         if (Array.isArray(icon.mockup.tooltip)) {
+
+							icon.mockup.tooltip.forEach((textLine) => {
+								ctx.save();
+                                drawText((textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                                contentY += 20;
+								ctx.restore();
+							};
+
+							/*
                             for (let i = 0; i < icon.mockup.tooltip.length; i++) {
                                 ctx.save();
                                 drawText((icon.mockup.tooltip)[i], panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
                                 contentY += 15;
 								ctx.restore();
                             }
+							*/
+							
                         } else {
                             ctx.save();
                             drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
