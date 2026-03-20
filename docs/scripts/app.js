@@ -3944,7 +3944,7 @@ void !(function () {
                         if (Array.isArray(icon.mockup.tooltip)) {
 						let formattedTooltips = [];
 						icon.mockup.tooltip.forEach(textLine => {
-							if (icon.mockup.tooltip[textLine].length > 55) {
+							if (textLine.length > 55) {
 								formattedTooltips.push(icon.mockup.tooltip[textLine].split());
 							} else {
 								formattedTooltips.push(icon.mockup.tooltip[textLine]);
