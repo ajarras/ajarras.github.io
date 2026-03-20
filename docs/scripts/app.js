@@ -3943,10 +3943,10 @@ void !(function () {
 					contentY += iconSize + panelPadding;
 					
 					// Draw Tooltip here, above buttons
+					const tooltip = getEntityImageFromMockup(mockup.index.tooltip, currentGuiColor);
 					//if (icon.mockup.tooltip != undefined) {
 						ctx.save();
-						//const tooltip = getEntityImageFromMockup(mockup.index.tooltip, currentGuiColor);
-						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+						drawText(tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 						contentY += 30;
 						ctx.restore();
 					//}
