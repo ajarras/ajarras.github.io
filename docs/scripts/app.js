@@ -3945,7 +3945,8 @@ void !(function () {
 					// Draw Tooltip here, above buttons
 					//if (icon.mockup.tooltip != undefined) {
 						ctx.save();
-						drawText(o.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+						//const tooltip = getEntityImageFromMockup(mockup.index.tooltip, currentGuiColor);
+						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 						contentY += 30;
 						ctx.restore();
 					//}
