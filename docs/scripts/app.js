@@ -3943,7 +3943,7 @@ void !(function () {
 					contentY += iconSize + panelPadding;
 					
 					// Draw Tooltip above buttons
-					/if (icon.mockup.tooltip != "") {
+					if (icon.mockup.tooltip != "") {
 						ctx.save();
 						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center"); // Tanks without tooltips display random ones currently
 						contentY += 30;
