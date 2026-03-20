@@ -3944,13 +3944,13 @@ void !(function () {
                         if (Array.isArray(icon.mockup.tooltip)) {
                             for (let i = 0; i < icon.mockup.tooltip.length; i++) {
                                 ctx.save();
-                                drawText([String(icon.mockup.tooltip)][i], panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                                drawText((icon.mockup.tooltip)[i], panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
                                 contentY += 15;
 								ctx.restore();
                             }
                         } else {
                             ctx.save();
-                            drawText(String(icon.mockup.tooltip), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+                            drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
                         }
                         contentY += 30;
 						ctx.restore();
