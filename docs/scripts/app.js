@@ -3942,7 +3942,8 @@ void !(function () {
 					// Draw Tooltip above buttons
 					if (icon.mockup.tooltip != "") {
 						ctx.save();
-						drawText(String(icon.mockup.tooltip).replaceAll(".,", `.\n`), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+						//drawText(String(icon.mockup.tooltip).replaceAll(".,", `.\n`), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+						drawText(String(icon.mockup.tooltip).split(".,").replaceAll(".,", "."), panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 						contentY += 30;
 						ctx.restore();
 					}
