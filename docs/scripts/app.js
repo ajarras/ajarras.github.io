@@ -3943,10 +3943,12 @@ void !(function () {
 					contentY += iconSize + panelPadding;
 					
 					// Draw Tooltip here, above buttons
-					ctx.save();
-					drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 12, color.guiwhite, "center");
-					contentY += 30;
-					ctx.restore();
+					if (icon.mockup.tooltip != undefined) {
+						ctx.save();
+						drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+						contentY += 30;
+						ctx.restore();
+					}
 					
 					const buttonHeight = 50;
 					contentY = panelHeight - buttonHeight;
