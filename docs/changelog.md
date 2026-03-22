@@ -85,6 +85,7 @@
 - Removed Assassin-2
 - Removed Trapper-2
 - Removed Boomer-2
+- Removed Boomer-3
 - Removed Builder-2
 - Removed Schematicist
 - Removed Trap Guard-2
