@@ -89,8 +89,6 @@
 - Removed Schematicist
 - Removed Trap Guard-2
 - Removed Basebrid-2
-- Removed Triplet-2
-- Removed Builder-2
 - Remobed Giftwrapper
 - Removed Keylogger
 - Removed Autocorrect
