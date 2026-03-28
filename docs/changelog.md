@@ -18,6 +18,7 @@
 - Bots can randomly use altfire
 - Optimized Switcheroo and let bots use its variants
 - Made all Boomer projectiles' movement less awkward
+- Reworked Reaper's minion to be more wormlike
 - Updated Bulward's design and mechanics to be more accurate
 - Redesigned Bastion and renamed it to Apiary
 - Redesigned Tri-Trapper and Hexa Trapper
