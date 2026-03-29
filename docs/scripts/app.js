@@ -3957,7 +3957,7 @@ void !(function () {
 
 								splitText(textLine, 2000, "").forEach(formatLine => {
 									ctx.save();
-									drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+									drawText(formatLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 									contentY += 20;
 									ctx.restore();
 								})
