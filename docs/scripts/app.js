@@ -3186,7 +3186,7 @@ void !(function () {
 		return ctx.measureText(text).width;
 	}
 
-	function splitText(text, maxLength, dash = "-", doMeasure = false) {
+	function splitText(text, maxLength, dash = "") {	//MEASURES TEXT BY ITS CHARACTER LENGTH, NOT ACTUAL MEASURED LENGTH
 		const words = text.split(/\s+/);
 		const output = [];
 		let currentLine = "";
@@ -3943,34 +3943,13 @@ void !(function () {
                     if (icon.mockup.tooltip != "") {
                         if (Array.isArray(icon.mockup.tooltip)) {						
 							icon.mockup.tooltip.forEach(textLine => {
-								/*
-								splitTooltip = textLine.split(" ")
-								printLine = ""
-								while (splitTooltip.length) {
-									while (printLine.length < 150) printLine += splitTooltip.shift() + splitTooltip.length ? " " : ""
-								}
-								ctx.save();
-								drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
-								contentY += 20;
-								ctx.restore();
-								*/
-
-								splitText(textLine, 55, "").forEach(formatLine => {
+								splitText(textLine, 55).forEach(formatLine => {
 									ctx.save();
 									drawText(formatLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 									contentY += 20;
 									ctx.restore();
 								})
 							});
-
-							/*
-							icon.mockup.tooltip.forEach(textLine => {
-								ctx.save();
-                                drawText(textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
-                                contentY += 20;
-								ctx.restore();
-							});
-							*/
                         } else {
                             ctx.save();
                             drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
