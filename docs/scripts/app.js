@@ -3945,8 +3945,8 @@ void !(function () {
 							icon.mockup.tooltip.forEach(textLine => {
 								splitTooltip = textLine.split(" ")
 								printLine = ""
-								while (splitTooltip.length()) {
-									while (printLine.length < 150) printLine += splitTooltip.shift() + splitTooltip.length() ? " " : ""
+								while (splitTooltip.length) {
+									while (printLine.length < 150) printLine += splitTooltip.shift() + splitTooltip.length ? " " : ""
 								}
 								ctx.save();
 								drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
