@@ -3943,6 +3943,7 @@ void !(function () {
                     if (icon.mockup.tooltip != "") {
                         if (Array.isArray(icon.mockup.tooltip)) {						
 							icon.mockup.tooltip.forEach(textLine => {
+								/*
 								splitTooltip = textLine.split(" ")
 								printLine = ""
 								while (splitTooltip.length) {
@@ -3952,6 +3953,14 @@ void !(function () {
 								drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
 								contentY += 20;
 								ctx.restore();
+								*/
+
+								splitText(textLine, 2000, "").forEach(formatLine => {
+									ctx.save();
+									drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+									contentY += 20;
+									ctx.restore();
+								})
 							});
 
 							/*
