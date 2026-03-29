@@ -3941,31 +3941,27 @@ void !(function () {
 					
 					// Draw Tooltip above buttons
                     if (icon.mockup.tooltip != "") {
-                        if (Array.isArray(icon.mockup.tooltip)) {
-						/*let formattedTooltips = [];
-						icon.mockup.tooltip.forEach(textLine => {
-							if (textLine.length > 55) {
-								formattedTooltips.push(textLine.split()); // uh how do i split it at a certain character length is the question, brb
-							} else {
-								formattedTooltips.push(icon.mockup.tooltip[textLine]);
-							}
-						});*/
+                        if (Array.isArray(icon.mockup.tooltip)) {						
+							icon.mockup.tooltip.forEach(textLine => {
+								splitTooltip = textLine.split(" ")
+								printLine = ""
+								while (splitTooltip.length()) {
+									while (printLine.length < 150) printLine += splitTooltip.shift() + splitTooltip.length() ? " " : ""
+								}
+								ctx.save();
+								drawText(printLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
+								contentY += 20;
+								ctx.restore();
+							});
+
+							/*
 							icon.mockup.tooltip.forEach(textLine => {
 								ctx.save();
                                 drawText(textLine, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
                                 contentY += 20;
 								ctx.restore();
 							});
-
-							/*
-                            for (let i = 0; i < icon.mockup.tooltip.length; i++) {
-                                ctx.save();
-                                drawText((icon.mockup.tooltip)[i], panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
-                                contentY += 15;
-								ctx.restore();
-                            }
 							*/
-							
                         } else {
                             ctx.save();
                             drawText(icon.mockup.tooltip, panelWidth / 2 + panelX, contentY, 15, color.guiwhite, "center");
