@@ -1671,9 +1671,9 @@ void !(function () {
 				case global.KEY_MOUSE_1:
 					this.parent.socket.cmd.set(5, true);
 					break;
-				case global.KEY_MOUSE_2:
-					this.parent.socket.cmd.set(6, true);
-					break;
+				//case global.KEY_MOUSE_2:
+					//this.parent.socket.cmd.set(6, true);
+					//break;
 				case global.KEY_ABILITY_2:
 					this.parent.socket.cmd.set(7, true);
 					break;
@@ -1863,9 +1863,9 @@ void !(function () {
 				case global.KEY_MOUSE_1:
 					this.parent.socket.cmd.set(5, false);
 					break;
-				case global.KEY_MOUSE_2:
-					this.parent.socket.cmd.set(6, false);
-					break;
+				//case global.KEY_MOUSE_2:
+					//this.parent.socket.cmd.set(6, false);
+					//break;
 				case global.KEY_ABILITY_2:
 					this.parent.socket.cmd.set(7, false);
 					break;
