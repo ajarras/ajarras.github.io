@@ -377,7 +377,6 @@ void !(function () {
 		KEY_UPGRADE_TREE: 85,
 		message: "Connecting",
 		KEY_TELEPORT: 84,
-		KEY_ABILITY_2: 17,
 		KEY_FUCK_YOU: 192,
 		KEY_KILL_MOUSE: 75,
 		CHAT_KEY: 70,
@@ -1674,9 +1673,6 @@ void !(function () {
 				//case global.KEY_MOUSE_2:
 					//this.parent.socket.cmd.set(6, true);
 					//break;
-				case global.KEY_ABILITY_2:
-					this.parent.socket.cmd.set(7, true);
-					break;
 				case global.KEY_LEVEL_UP:
 					this.parent.socket.talk("L");
 					break;
@@ -1866,9 +1862,6 @@ void !(function () {
 				//case global.KEY_MOUSE_2:
 					//this.parent.socket.cmd.set(6, false);
 					//break;
-				case global.KEY_ABILITY_2:
-					this.parent.socket.cmd.set(7, false);
-					break;
 			}
 		}
 		mouseDown(mouse) {
