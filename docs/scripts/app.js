@@ -1427,6 +1427,8 @@ void !(function () {
 	const gui = {
 		getStatNames: (num) => {
 			switch (num) {
+				case 0:
+					return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //GENERIC
 				case 1:
 					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Engine Acceleration;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //SMASHER
 				case 2:
@@ -1444,7 +1446,7 @@ void !(function () {
 				case 8:
 					return "Body Damage;Max Health;Boomerang Speed;Boomerang Health;Boomerang Penetration;Boomerang Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //BOOMERANG
 				case 9:
-					return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";"); //GENERIC
+					return "Body Damage;Max Health;Nanite Speed;Nanite Health;Nanite Penetration;Nanite Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");	//NANOSWARM
 				default:
 					return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");	//BULLET
 			}
