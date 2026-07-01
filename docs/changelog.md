@@ -95,6 +95,7 @@
 - Removed Keylogger
 - Removed Autocorrect
 - Removed Auto-Director
+- Removed Auto-Seer
 - Removed Auto-Spawner
 - Removed Subjugator
 - Removed Ordnance
