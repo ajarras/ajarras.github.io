@@ -94,6 +94,8 @@
 - Remobed Giftwrapper
 - Removed Keylogger
 - Removed Autocorrect
+- Removed Auto-Director
+- Removed Auto-Spawner
 - Removed Subjugator
 - Removed Ordnance
 - Removed Interrogator
