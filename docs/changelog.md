@@ -149,6 +149,9 @@
 - Removed Blastceptioner
 - Removed Heatseeker
 - Removed Arduino
+- Removed Algorithm
+- Removed Autoceptioner
+- Removed Machceptioner
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
 - Improved performance of upgrade tree data building.
