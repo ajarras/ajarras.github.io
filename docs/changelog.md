@@ -137,6 +137,10 @@
 - Removed Debugger
 - Removed Spreadgun
 - Removed Scattergun
+- Removed Advent
+- Removed Matutine
+- Removed Ignition
+- Removed Eminence
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
 - Improved performance of upgrade tree data building.
