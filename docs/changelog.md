@@ -146,6 +146,9 @@
 - Removed Mechanizer
 - Removed Twinceptioner
 - Removed Hewnceptioner
+- Removed Blastceptioner
+- Removed Heatseeker
+- Removed Arduino
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
 - Improved performance of upgrade tree data building.
