@@ -9,6 +9,7 @@
 - Massively overhauled the Discord bot
 - Disconnected players can randomly return as bots
 - Invisible tanks can no longer cloak while in spawn invincibility
+- Made the whole game faster. Not more performant, literally faster.
 - Made leaderboard placement based purely on score
 - Allowed Basic bots to spawn
 - Bots spawn in an temporary idle state like players
@@ -152,6 +153,10 @@
 - Removed Algorithm
 - Removed Autoceptioner
 - Removed Machceptioner
+- Removed Subordinate
+- Removed Roulette
+- Removed Quaternary
+- Removed Gauntlet
 # UPDATE 4/6/2025 - Complete Upgrade Tree
 - Cleaned up client code for entity rendering.
 - Improved performance of upgrade tree data building.
