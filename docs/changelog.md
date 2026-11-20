@@ -27,6 +27,9 @@
 - Made Dread-Ship branch from Expedition and Beegun
 - Fixed some branching and tier errors
 - Made the upgrade tree root from Basic by default
+- Removed Demoist and replaced it with Chute in all branches
+- Removed Demolitioner, replaced it with Trough in all branches
+- Removed Jupiter
 - Removed Revolver
 - Removed Surroundsound
 - Removed Bent Sniper
