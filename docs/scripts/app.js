@@ -3393,26 +3393,32 @@ void !(function () {
 		const cos4 = Math.cos(angle4),
 			sin4 = Math.sin(angle4);
 		context.beginPath();
-		switch (shape) {
-			case 0: {
+		switch (shape) { // TODO: 359'S THING
+			case 0: { // DEFAULT
 				context.lineTo(x + l0 * cos1, y + l0 * sin1);
 				context.lineTo(x + l1 * cos2, y + l1 * sin2);
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
 				context.lineTo(x + l0 * cos4, y + l0 * sin4);
 			};
 				break;
-			case 1: {
-        context.ellipse(x - Math.cos(angle) * height, y - Math.sin(angle) * height, length, height, angle, 0, 2 * Math.PI);
-        if (aspect < 1) context.ellipse(x - Math.cos(angle) * height, y - Math.sin(angle) * height, length * (1 - aspect), height * (1 - aspect), angle, 0, 2 * Math.PI);
+			case 1: { // CIRCLE
+        		context.ellipse(x - Math.cos(angle) * height, y - Math.sin(angle) * height, length, height, angle, 0, 2 * Math.PI);
+        		if (aspect < 1) context.ellipse(x - Math.cos(angle) * height, y - Math.sin(angle) * height, length * (1 - aspect), height * (1 - aspect), angle, 0, 2 * Math.PI);
 			};
 				break;
-			case 2: {
-        context.lineTo(x + l1 * cos2, y + l1 * sin2);
+			case 2: { // LINE
+                const cosA = Math.cos(angle);
+                const sinA = Math.sin(angle);
+                context.moveTo(x - length * cosA, y - length * sinA);
+                context.lineTo(x + length * cosA, y + length * sinA);
+				/* // RIGHT TRIANGLE SUPPOSEDLY??
+        		context.lineTo(x + l1 * cos2, y + l1 * sin2);
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
 				context.lineTo(x + l0 * cos4, y + l0 * sin4);
-      };
+				*/
+      		};
         		break;
-			case 3: {
+			case 3: { // i have no clue honestly
 				context.lineTo(x + l0 * cos1, y + l0 * sin1);
 				context.lineTo(x + l1 * cos2, y + l1 * sin2);
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
