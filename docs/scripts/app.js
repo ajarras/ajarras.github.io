@@ -3372,7 +3372,7 @@ void !(function () {
 		}
 	}
 
-	function drawGun(x, y, length, height, aspect, angle, shape, context = ctx) {
+	function drawGun(x, y, length, height, aspect, angle, shape, context = ctx) { // CUSTOM BARREL SHAPES
 		const aPos = aspect >= 0;
 		const h0 = aPos ? height * aspect : height;
 		const h1 = aPos ? height : -height * aspect;
@@ -3407,10 +3407,14 @@ void !(function () {
 			};
 				break;
 			case 2: { // LINE
-                const cosA = Math.cos(angle);
-                const sinA = Math.sin(angle);
-                context.moveTo(x - length * cosA, y - length * sinA);
-                context.lineTo(x + length * cosA, y + length * sinA);
+				const cosA = Math.cos(angle);
+				const sinA = Math.sin(angle);
+				context.moveTo(x - length * cosA, y - length * sinA);
+				context.lineTo(x + length * cosA, y + length * sinA);
+				context.lineWidth *= 0.5;
+				context.stroke();
+				context.lineWidth *= 2;
+				return;
 				/* // RIGHT TRIANGLE SUPPOSEDLY??
         		context.lineTo(x + l1 * cos2, y + l1 * sin2);
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
