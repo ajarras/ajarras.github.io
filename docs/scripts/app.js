@@ -3393,7 +3393,7 @@ void !(function () {
 		const cos4 = Math.cos(angle4),
 			sin4 = Math.sin(angle4);
 		context.beginPath();
-		switch (shape) { // TODO: 359'S THING
+		switch (shape) {
 			case 0: { // DEFAULT
 				context.lineTo(x + l0 * cos1, y + l0 * sin1);
 				context.lineTo(x + l1 * cos2, y + l1 * sin2);
@@ -3445,6 +3445,26 @@ void !(function () {
 						cy + lx * sinA + ly * cosA
 					);
 				}
+			};
+				break;
+			case 5: { // RECTANGLE (1), HEXAGON (0.5), DIAMOND (0) 
+				const cosA = Math.cos(angle);
+				const sinA = Math.sin(angle);
+				const cx = x - cosA * length;
+				const cy = y - sinA * length;
+				const edgeY = height * Math.max(0, aspect);
+				const lx = length * cosA;
+				const ly = length * sinA;
+				const hx = height * sinA;
+				const hy = height * cosA;
+				const ex = edgeY * sinA;
+				const ey = edgeY * cosA;
+				context.moveTo(cx + lx - ex, cy + ly + ey); // Front-bottom
+				context.lineTo(cx - hx,      cy + hy);      // Mid-bottom peak
+				context.lineTo(cx - lx - ex, cy - ly + ey); // Back-bottom
+				context.lineTo(cx - lx + ex, cy - ly - ey); // Back-top
+				context.lineTo(cx + hx,      cy - hy);      // Mid-top peak
+				context.lineTo(cx + lx + ex, cy + ly - ey); // Front-top
 			};
 				break;
 		}
