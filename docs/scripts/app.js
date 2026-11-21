@@ -3418,13 +3418,16 @@ void !(function () {
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
 			};
 				break;
-			case 4: { // im scared theres hexagons
+			case 4: { // Polygons and HEXAGONS WOOO
+				const sides = Math.max(3, Math.round(aspect));
+				const step = (2 * Math.PI) / sides;
+				const offset = sides % 2 === 0 ? Math.PI / sides : Math.PI / 2;
 				const cosA = Math.cos(angle);
 				const sinA = Math.sin(angle);
 				const cx = x - cosA * length;
 				const cy = y - sinA * length;
-				for (let i = 0; i < 6; i++) {
-					const theta = (i * Math.PI) / 3 + Math.PI / 6; // + Math.PI / 6 makes it flat-topped
+				for (let i = 0; i < sides; i++) {
+					const theta = i * step + offset;
 					const lx = length * Math.cos(theta);
 					const ly = height * Math.sin(theta);
 					context.lineTo(
