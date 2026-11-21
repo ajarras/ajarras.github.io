@@ -3411,7 +3411,7 @@ void !(function () {
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
 				context.lineTo(x + l0 * cos4, y + l0 * sin4);
       };
-        break;
+        		break;
 			case 3: {
 				context.lineTo(x + l0 * cos1, y + l0 * sin1);
 				context.lineTo(x + l1 * cos2, y + l1 * sin2);
