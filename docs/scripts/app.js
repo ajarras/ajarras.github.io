@@ -3418,6 +3418,20 @@ void !(function () {
 				context.lineTo(x + l1 * cos3, y + l1 * sin3);
 			};
 				break;
+			case 4: { // im scared
+				const cosA = Math.cos(angle);
+				const sinA = Math.sin(angle);
+				for (let i = 0; i < 6; i++) {
+					const theta = (i * Math.PI) / 3;
+					const lx = length * Math.cos(theta);
+					const ly = height * Math.sin(theta);
+					context.lineTo(
+						x + lx * cosA - ly * sinA,
+						y + lx * sinA + ly * cosA
+					);
+				}
+			}
+				break;
 		}
     context.closePath();
 		context.stroke();
