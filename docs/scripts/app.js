@@ -3421,13 +3421,15 @@ void !(function () {
 			case 4: { // im scared theres hexagons
 				const cosA = Math.cos(angle);
 				const sinA = Math.sin(angle);
+				const cx = x - cosA * length;
+				const cy = y - sinA * length;
 				for (let i = 0; i < 6; i++) {
-					const theta = (i * Math.PI) / 3; // i * Math.PI) / 3 + Math.PI / 6
+					const theta = (i * Math.PI) / 3 + Math.PI / 6; // + Math.PI / 6 makes it flat-topped
 					const lx = length * Math.cos(theta);
 					const ly = height * Math.sin(theta);
 					context.lineTo(
-						x + lx * cosA - ly * sinA,
-						y + lx * sinA + ly * cosA
+						cx + lx * cosA - ly * sinA,
+						cy + lx * sinA + ly * cosA
 					);
 				}
 			};
