@@ -29,7 +29,7 @@
 - Made the upgrade tree root from Basic by default
 - Removed Demoist and replaced it with Chute in all branches
 - Removed Demolitioner, replaced it with Trough in all branches
-- Removed the entire Bird branch
+- Removed almost all of the Bird branch, except for Peacock which now branches from Booster
 - Removed Jupiter
 - Removed Revolver
 - Removed Surroundsound
