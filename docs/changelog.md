@@ -17,6 +17,7 @@
 - Bots wander around outside of combat
 - Bots can randomly decide not to flee at low health
 - Bots can randomly use altfire
+- Bosses that point at targets now turn 5x faster
 - Optimized Switcheroo and let bots use its variants
 - Made all Boomer projectiles' movement less awkward
 - Reworked Reaper's minion to be more wormlike
