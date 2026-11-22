@@ -9,7 +9,7 @@
 - Massively overhauled the Discord bot
 - Disconnected players can randomly return as bots
 - Invisible tanks can no longer cloak while in spawn invincibility
-- Made the whole game faster. Not more performant, literally faster.
+- Made the whole game faster (Not more performant, literally faster)
 - Made leaderboard placement based purely on score
 - Allowed Basic bots to spawn
 - Bots spawn in an temporary idle state like players
@@ -29,6 +29,7 @@
 - Made the upgrade tree root from Basic by default
 - Removed Demoist and replaced it with Chute in all branches
 - Removed Demolitioner, replaced it with Trough in all branches
+- Removed the entire Bird branch
 - Removed Jupiter
 - Removed Revolver
 - Removed Surroundsound
