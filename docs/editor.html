@@ -282,9 +282,7 @@
 			}
 			outputArea.textContent = `Submitting code to ${serverSelect.options[serverSelect.selectedIndex].text} (${selectedServerUrl})...`;
 			submitButton.disabled = true;
-			// console.log("URL: " + selectedServerUrl);
-			// const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!!
-			const targetEndpoint = "https://aj-server-n8yv.onrender.com/dev/update-live";
+			const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!! // to what 
 			try {
 				const response = await fetch(targetEndpoint, {
 					method: "POST",
