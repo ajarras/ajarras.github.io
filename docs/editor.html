@@ -282,8 +282,9 @@
 			}
 			outputArea.textContent = `Submitting code to ${serverSelect.options[serverSelect.selectedIndex].text} (${selectedServerUrl})...`;
 			submitButton.disabled = true;
-			console.log("URL: " + selectedServerUrl);
-			const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!!
+			// console.log("URL: " + selectedServerUrl);
+			// const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!!
+			const targetEndpoint = "ajarras.github.io/dev/update-live";
 			try {
 				const response = await fetch(targetEndpoint, {
 					method: "POST",
