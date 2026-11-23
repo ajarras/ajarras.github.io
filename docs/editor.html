@@ -282,6 +282,7 @@
 			}
 			outputArea.textContent = `Submitting code to ${serverSelect.options[serverSelect.selectedIndex].text} (${selectedServerUrl})...`;
 			submitButton.disabled = true;
+			console.log("URL: " + selectedServerUrl);
 			const targetEndpoint = selectedServerUrl + "/dev/update-live"; // <<<=== !!! ADJUST THIS ENDPOINT !!!
 			try {
 				const response = await fetch(targetEndpoint, {
