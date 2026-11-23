@@ -4,14 +4,4 @@
 		"url": "aj-server-n8yv.onrender.com",
 		"protocol": "https:"
 	},
-	{
-		"name": "xskutsu",
-		"url": "209.197.71.50:3100",
-		"protocol": "http:"
-	},
-	{
-		"name": "Localhost",
-		"url": "localhost:3012",
-		"protocol": "http:"
-	}
 ]
