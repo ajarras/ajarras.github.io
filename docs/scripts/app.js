@@ -3785,7 +3785,7 @@ void !(function () {
 				const screenOffsetX = screenWidthHalf - px;
 				const screenOffsetY = screenHeightHalf - py;
 				const commands = global.socket.cmd.commands;
-				entities.forEach(function entityDrawingCombinedLoop(instance) {
+				entities.forEach(function entityDrawingCombinedLoop(instance) { // ADD CULLING HERE?
 					const render = instance.render;
 					if (!render.draws) {
 						return;
