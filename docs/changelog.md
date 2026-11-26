@@ -103,6 +103,19 @@
 - Removed Auto-Director
 - Removed Auto-Seer
 - Removed Auto-Spawner
+- Removed Gunner Trapper
+- Removed Gunwark
+- Removed Reserve
+- Removed Plateau
+- Removed Magebrid
+- Removed Spellbinder
+- Removed Magitek
+- Removed Weatherer
+- Removed Twin Guard
+- Removed Heatguard
+- Removed Brushfire
+- Removed Scarecrow
+- Removed Crisis
 - Removed Subjugator
 - Removed Ordnance
 - Removed Interrogator
