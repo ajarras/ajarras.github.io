@@ -131,6 +131,8 @@
 - Removed Turretmaster
 - Removed Functionist
 - Removed Conscience
+- Removed Gunbrid
+- Removed Overgunner
 - Removed Crewman
 - Removed Sidearm
 - Removed Private
